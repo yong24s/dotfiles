@@ -1,0 +1,3 @@
+#include ".config/.Xresources.d/nord"
+#include ".config/.Xresources.d/urxvt"
+

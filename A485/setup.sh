@@ -1,0 +1,84 @@
+# Update everything first
+sudo pacman -Syu # --noconfirm
+
+# Install yay
+git clone https://aur.archlinux.org/yay.git /var/tmp
+cd /var/tmp
+makepkg -si
+
+# Install tlp for power management
+yay -S linux-headers
+yay -S acpi_call-dkms tp_smapi-dkms tlp
+sudo systemctl enable tlp.service
+sudo systemctl enable tlp-sleep.service
+sudo systemctl mask systemd-rfkill.service
+sudo systemctl mask systemd-rfkill.socket
+sudo cp etc-default/tlp /etc/default/tlp
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Turn on TRIM weekly for SSD
+sudo systemctl enable fstrim.timer
+
+# Generate keys
+ssh-keygen -t ecdsa -b 521 -q -N "" -f ~/.ssh/id_ecdsa
+
+# Create common directories in $HOME
+yay -S xdg-user-dirs
+xdg-user-dirs-update
+
+# Set prefs
+git config --global core.editor "nvim"
+sudo alsactl store # Save sound level
+
+# Fonts to ensure Chrome is displaying UTF-8 correctly
+yay -S ttf-freefont ttf-liberation ttf-droid
+
+# Install backlight
+sudo pacman -S light
+
+# Install UI stuffs
+yay -S polybar feh ttf-material-design-icons-webfont rofi lxappearance arc-gtk-theme paper-icon-theme neofetch noto-fonts-emoji python-ueberzug-git
+yay -S thunar thunar-archive-plugin gvfs gvfs-smb sshfs gnome-keyring
+yay -S betterlockscreen xautolock dunst
+yay -S redshift
+
+# Install useful programs
+yay -S google-chrome
+yay -S git ranger rxvt-unicode urxvt-resize-font-git
+yay -S mlocate wget cronie udiskie arandr
+yay -S mpv cmus alsa-lib i3-scrot bc galculator
+
+# Additional tools
+yay -S xfreerdp openvpn wireguard-tools
+yay -S xl2tpd openswan
+yay -S libreoffice-still evince
+yay -S jdk-openjdk intellij-idea-community-edition
+
+# Setup betterlockscreen
+betterlockscreen -u ~/Pictures/wallpaper.jpg
+sudo systemctl enable betterlockscreen@$USER
+
+# Set thunar as xdg default
+xdg-mime default Thunar-folder-handler.desktop inode/directory
+
+# Setup getty font
+pacman -S terminus-font
+setfont ter-218n
+
+# Automatically connect to wifi profile
+# /etc/netctl/[PROFILE]
+# netctl enable [PROFILE]
+
+# List unused orphans packages
+pacman -Qdtm
+
+# List installed packages
+pacman -Qqett
+
+# List enabled services
+systemctl list-unit-files --state=enabled
+
+# List mask services
+systemctl list-unit-files --state=mask

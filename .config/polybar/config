@@ -1,11 +1,4 @@
-;====================================================
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/jaagr/polybar
-;
-;   The README contains alot of information
-;
-;=====================================================
+# vim: filetype=dosini
 
 [colors]
   nord0 = ${xrdb:background}
@@ -21,13 +14,14 @@
   ;monitor = ${env:MONITOR:HDMI-1}
   width = 100%
   height = 32
-  offset-x = 3%
-  offset-y = 3%
+  ;offset-x = 3%
+  ;offset-y = 3%
   radius = 0.0
+  padding-right = 1
   module-margin-left = 1
   module-margin-right = 1
 
-  font-0 = "Hack:size=10"
+  font-0 = "DejaVu Sans Mono:style=Book:pixelsize=10"
   font-1 = "Material Design Icons:style=Regular:pixelsize=14"
 
   modules-left = i3
@@ -94,8 +88,8 @@ bar-progress-empty = ─
   interface = "wlp2s0"
 
   label-connected = %essid%
-  format-connected = %{A:terminal -e /usr/bin/nmtui &:}<ramp-signal> <label-connected>%{A}
-  format-disconnected = %{A:terminal -e /usr/bin/mntui &:}浪%{A}
+  format-connected = %{A:(urxvt -title "wifi-menu" -e sudo wifi-menu):}<ramp-signal> <label-connected>%{A}
+  format-disconnected = %{A:urxvt -title "wifi-menu" -e sudo wifi-menu:}浪%{A}
   format-connected-foreground = ${colors.nord6}
   format-disconnected-foreground = ${colors.nord6}
 
@@ -137,7 +131,7 @@ bar-progress-empty = ─
   headphone-id = 15
   mapped = true
  
-  format-volume = %{A3:terminal -e alsamixer &:}<ramp-volume> <label-volume>%{A}
+  format-volume = %{A3:urxvt -e alsamixer &:}<ramp-volume> <label-volume>%{A}
   format-foreground = ${colors.nord6}
 
   label-muted = "" 
@@ -187,4 +181,3 @@ bar-progress-empty = ─
     
   format-foreground = ${colors.nord6}
 
-; vim:ft=dosini
