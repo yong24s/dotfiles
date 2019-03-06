@@ -14,6 +14,7 @@ sudo rfkill block bluetooth
 
 # Install programs
 sudo pacman -S polybar
+sudo pacman -S feh
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git /var/tmp
@@ -36,4 +37,10 @@ sudo pacman -R palemoon-bin
 
 # List unused orphans packages
 pacman -Qdtm
+
+# Set sound level
+sudo alsactl store
+
+# Install URXVT Packages
+yay -S urxvt-resize-font-git
 
