@@ -44,3 +44,5 @@ sudo alsactl store
 # Install URXVT Packages
 yay -S urxvt-resize-font-git
 
+# Install AMD Microcode
+sudo pacman -S amd-ucode

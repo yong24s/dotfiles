@@ -6,13 +6,14 @@ Xft.autohint:  		  	   true
 Xft.hintstyle:			   hintslight
 Xft.lcdfilter:  		   lcddefault
  
-URxvt.font: xft:Fira Code:style=Regular:pixelsize=12 
-URxvt*letterSpace:	          -2
+URxvt.font: xft:Fira Code:style=Regular:pixelsize=16 
+URxvt*letterSpace:	          -1
 URxvt.internalBorder:	      	  25
 URxvt.scrollBar:		  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
 URxvt*saveLines:                  5000
+URxvt*fading: 0
 
 ! Normal copy-paste keybindings without perls
 URxvt.iso14755:                   false
