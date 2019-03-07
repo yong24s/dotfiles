@@ -46,3 +46,7 @@ yay -S urxvt-resize-font-git
 
 # Install AMD Microcode
 sudo pacman -S amd-ucode
+
+# Install backlight
+sudo pacman -S light
+
