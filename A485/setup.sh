@@ -50,3 +50,9 @@ sudo pacman -S amd-ucode
 # Install backlight
 sudo pacman -S light
 
+# Install TLP extras
+yay -S linux420-headers
+yay -S acpi_call-dkms tp_smapi-dkms
+
+# Turn on trim service for SSD
+sudo systemctl enable fstrim.timer
