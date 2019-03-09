@@ -38,15 +38,25 @@ sudo systemctl enable fstrim.timer
 # Generate keys
 ssh-keygen -t ecdsa -b 521 -q -N "" -f ~/.ssh/id_ecdsa
 
+# Create common directories in $HOME
+yay -S xdg-user-dirs
+xdg-user-dirs-update
+
 # Automatically connect to wifi profile
 # /etc/netctl/[PROFILE]
 # netctl enable [PROFILE]
 
 # Additional tools
-yay -S xfreerdp openvpn wireguard-tools
-yay -S thunar mpv cmus scrot bc galculator dunst
+yay -S xfreerdp openvpn wireguard-tools mlocate wget
+yay -S lxappearance arc-gtk-theme paper-icon-theme
+yay -S thunar thunar-archive-plugin gvfs gvfs-smb sshfs gnome-keyring
+yay -S mpv cmus i3-scrot bc galculator dunst
 yay -S libreoffice-still lector-git
 yay -S jdk-openjdk intellij-idea-community-edition
+yay -S neofetch noto-fonts-emoji
 
 # List unused orphans packages
 pacman -Qdtm
+
+# List installed packages
+pacman -Qqett

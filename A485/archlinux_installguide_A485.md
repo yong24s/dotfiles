@@ -44,6 +44,8 @@ timedatectl set-ntp true
 ```
 vim /etc/locale.gen
 locale-gen
+touch /etc/locale.conf
+echo LANG=en_US.UTF-8 > /etc/locale.conf
 ```
 > Remove # to before a locale to use it
 
@@ -93,6 +95,6 @@ umount -R /mnt
 
 ### Xorg
 ```
-pacman -S xorg-server xorg-xinit xorg-apps xf86-video-amdgpu alsa-utils
+pacman -S xorg-server xorg-xinit xorg-apps xf86-video-amdgpu mesa-vdpau libva-mesa-drivera lsa-utils
 pacman -S i3-gaps ttf-dejavu rxvt-unicode light
 ```
