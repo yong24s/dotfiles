@@ -50,10 +50,13 @@ xdg-user-dirs-update
 yay -S xfreerdp openvpn wireguard-tools mlocate wget
 yay -S lxappearance arc-gtk-theme paper-icon-theme
 yay -S thunar thunar-archive-plugin gvfs gvfs-smb sshfs gnome-keyring
-yay -S mpv cmus i3-scrot bc galculator dunst
-yay -S libreoffice-still lector-git
+yay -S mpv cmus i3-scrot bc galculator dunst betterlockscreen xautolock
+yay -S libreoffice-still mupdf-git
 yay -S jdk-openjdk intellij-idea-community-edition
 yay -S neofetch noto-fonts-emoji
+
+betterlockscreen -u ~/Pictures/wallpaper.jpg
+sudo systemctl enable betterlockscreen@$USER
 
 # List unused orphans packages
 pacman -Qdtm
