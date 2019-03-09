@@ -9,8 +9,8 @@ makepkg -si
 # Install backlight
 sudo pacman -S light
 
-# Install polybar
-yay -S polybar feh ttf-material-design-icons-webfont
+# Install polybar and UI stuffs
+yay -S polybar feh ttf-material-design-icons-webfont rofi
 
 # Install useful programs
 yay -S google-chrome
@@ -37,6 +37,16 @@ sudo systemctl enable fstrim.timer
 
 # Generate keys
 ssh-keygen -t ecdsa -b 521 -q -N "" -f ~/.ssh/id_ecdsa
+
+# Automatically connect to wifi profile
+# /etc/netctl/[PROFILE]
+# netctl enable [PROFILE]
+
+# Additional tools
+yay -S xfreerdp openvpn wireguard-tools
+yay -S thunar mpv cmus scrot bc galculator dunst
+yay -S libreoffice-still lector-git
+yay -S jdk-openjdk intellij-idea-community-edition
 
 # List unused orphans packages
 pacman -Qdtm

@@ -96,4 +96,3 @@ umount -R /mnt
 pacman -S xorg-server xorg-xinit xorg-apps xf86-video-amdgpu alsa-utils
 pacman -S i3-gaps ttf-dejavu rxvt-unicode light
 ```
-
