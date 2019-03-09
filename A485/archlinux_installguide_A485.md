@@ -82,12 +82,6 @@ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB /dev/
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-### Xorg
-```
-pacman -S xorg-server xorg-xinit xorg-apps xf86-video-amdgpu
-pacman -S i3-gaps ttf-dejavu
-```
-
 ### Boot to Arch Linux
 ```
 exit
@@ -96,7 +90,10 @@ umount -R /mnt
 
 ## Post Installation
 [WIP]
+
+### Xorg
 ```
-pacman -S zsh rxvt-unicode git ranger
-pacman -S tlp
+pacman -S xorg-server xorg-xinit xorg-apps xf86-video-amdgpu alsa-utils
+pacman -S i3-gaps ttf-dejavu rxvt-unicode light
 ```
+
