@@ -29,7 +29,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 wget -O $ZSH_CUSTOM/themes/common.zsh-theme https://raw.githubusercontent.com/jackharrisonsherlock/common/master/common.zsh-theme
 
 # Set prefs
-git config --global core.editor "vim"
+git config --global core.editor "nvim"
 sudo alsactl store # Save sound level
 
 # Turn on TRIM weekly for SSD
