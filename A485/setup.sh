@@ -32,6 +32,8 @@ xdg-user-dirs-update
 git config --global core.editor "nvim"
 sudo alsactl store # Save sound level
 
+# Fonts to ensure Chrome is displaying UTF-8 correctly
+yay -S ttf-freefont ttf-liberation ttf-droid
 
 # Install backlight
 sudo pacman -S light
