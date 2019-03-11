@@ -23,6 +23,7 @@ sudo systemctl enable tlp.service
 sudo systemctl enable tlp-sleep.service
 sudo systemctl mask systemd-rfkill.service
 sudo systemctl mask systemd-rfkill.socket
+# systemctl list-unit-files --state=enabled
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -57,6 +58,12 @@ yay -S neofetch noto-fonts-emoji
 
 betterlockscreen -u ~/Pictures/wallpaper.jpg
 sudo systemctl enable betterlockscreen@$USER
+
+cronie udiskie arandr
+xl2tpd openswan
+pacman -S terminus-font
+setfont ter-218n
+
 
 # List unused orphans packages
 pacman -Qdtm
