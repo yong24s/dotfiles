@@ -88,8 +88,8 @@ bar-progress-empty = ─
   interface = "wlp2s0"
 
   label-connected = %essid%
-  format-connected = %{A:terminal -e /usr/bin/nmtui &:}<ramp-signal> <label-connected>%{A}
-  format-disconnected = %{A:terminal -e /usr/bin/mntui &:}浪%{A}
+  format-connected = %{A:(urxvt -title "wifi-menu" -e sudo wifi-menu):}<ramp-signal> <label-connected>%{A}
+  format-disconnected = %{A:urxvt -title "wifi-menu" -e sudo wifi-menu:}浪%{A}
   format-connected-foreground = ${colors.nord6}
   format-disconnected-foreground = ${colors.nord6}
 
@@ -131,7 +131,7 @@ bar-progress-empty = ─
   headphone-id = 15
   mapped = true
  
-  format-volume = %{A3:terminal -e alsamixer &:}<ramp-volume> <label-volume>%{A}
+  format-volume = %{A3:urxvt -e alsamixer &:}<ramp-volume> <label-volume>%{A}
   format-foreground = ${colors.nord6}
 
   label-muted = "" 
