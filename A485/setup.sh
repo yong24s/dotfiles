@@ -37,9 +37,10 @@ sudo alsactl store # Save sound level
 sudo pacman -S light
 
 # Install UI stuffs
-yay -S polybar feh ttf-material-design-icons-webfont rofi lxappearance arc-gtk-theme paper-icon-theme neofetch noto-fonts-emoji
+yay -S polybar feh ttf-material-design-icons-webfont rofi lxappearance arc-gtk-theme paper-icon-theme neofetch noto-fonts-emoji python-ueberzug-git
 yay -S thunar thunar-archive-plugin gvfs gvfs-smb sshfs gnome-keyring
 yay -S betterlockscreen xautolock dunst
+yay -S redshift
 
 # Install useful programs
 yay -S google-chrome
