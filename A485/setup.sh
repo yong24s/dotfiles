@@ -57,6 +57,9 @@ yay -S jdk-openjdk intellij-idea-community-edition
 betterlockscreen -u ~/Pictures/wallpaper.jpg
 sudo systemctl enable betterlockscreen@$USER
 
+# Set thunar as xdg default
+xdg-mime default Thunar-folder-handler.desktop inode/directory
+
 # Setup getty font
 pacman -S terminus-font
 setfont ter-218n
