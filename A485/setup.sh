@@ -48,7 +48,7 @@ yay -S redshift
 yay -S google-chrome
 yay -S git ranger rxvt-unicode urxvt-resize-font-git
 yay -S mlocate wget cronie udiskie arandr
-yay -S mpv cmus i3-scrot bc galculator
+yay -S mpv cmus alsa-lib i3-scrot bc galculator
 
 # Additional tools
 yay -S xfreerdp openvpn wireguard-tools
