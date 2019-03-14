@@ -23,32 +23,23 @@ bindsym $mod+Shift+q kill
 # start program launcher
 bindsym $mod+d exec --no-startup-id rofi -show run
 
-# launch categorized menu
-bindsym $mod+z exec --no-startup-id morc_menu
-
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec "light -A 1;"
 bindsym XF86MonBrightnessDown exec "light -U 1;"
-
 # Volume Controls
 bindsym XF86AudioMute exec "amixer set Master toggle"
 bindsym XF86AudioRaiseVolume exec "amixer sset Master 1%+"
 bindsym XF86AudioLowerVolume exec "amixer sset Master 1%-"
-
+bindsym XF86AudioMicMute exec "alsamixer"
 bindsym XF86Display exec "arandr"
 bindsym XF86Launch1 exec "~/.config/scripts/toggle-touchpad.sh"
 # bindsym XF86Tools exec ""
 # bindsym XF86Favorites exec ""
 
 # Start Applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-# bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-# bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+Print --release exec --no-startup-id i3-scrot
+bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -w
 
 # focus_follows_mouse no
 
@@ -201,13 +192,13 @@ mode "resize" {
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
     bindsym j resize shrink width 5 px or 5 ppt
-        bindsym k resize grow height 5 px or 5 ppt
-        bindsym l resize shrink height 5 px or 5 ppt
-        bindsym semicolon resize grow width 5 px or 5 ppt
+    bindsym k resize grow height 5 px or 5 ppt
+    bindsym l resize shrink height 5 px or 5 ppt
+    bindsym semicolon resize grow width 5 px or 5 ppt
 
 # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
     bindsym Up resize shrink height 10 px or 10 ppt
     bindsym Right resize grow width 10 px or 10 ppt
 
@@ -243,7 +234,7 @@ exec_always --no-startup-id $HOME/.config/polybar/polybar-scripts/launch.sh
 #############################
 
 # Set inner/outer gaps
-gaps inner 20
+gaps inner 15
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -259,8 +250,8 @@ gaps inner 20
 
 # Create borders
 # for_window [class="^.*"] border pixel 4
-default_border pixel 4
-default_floating_border pixel 1
+default_border pixel 3
+default_floating_border pixel 3
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 # new_window pixel 2
@@ -285,10 +276,10 @@ set $nord14 #A3BE8C
 set $nord15 #B48EAD
 
 # Property Name         Border  BG       Text    Indicator Child Border
-client.focused          $nord4  $nord9   $nord0  $nord9 
-client.focused_inactive $nord4  $nord3   $nord6  $nord9
-client.unfocused        $nord4  $nord3   $nord6  $nord9
-client.urgent           $nord4  $nord3   $nord6  $nord9
-client.placeholder      $nord4  $nord3   $nord6  $nord9
+client.focused          $nord4  $nord4   $nord0  $nord1 
+client.focused_inactive $nord4  $nord1   $nord6  $nord1
+client.unfocused        $nord4  $nord1   $nord6  $nord1
+client.urgent           $nord4  $nord1   $nord6  $nord1
+client.placeholder      $nord4  $nord1   $nord6  $nord1
 client.background       $nord4
 
