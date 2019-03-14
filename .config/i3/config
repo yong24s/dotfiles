@@ -285,10 +285,10 @@ set $nord14 #A3BE8C
 set $nord15 #B48EAD
 
 # Property Name         Border  BG       Text    Indicator Child Border
-client.focused          $nord4  $nord9   $nord3  $nord10 
-client.focused_inactive $nord4  $nord3   $nord6  $nord10
-client.unfocused        $nord4  $nord3   $nord6  $nord10
-client.urgent           $nord7  $nord7   $nord6  $nord10
-client.placeholder      $nord4  $nord3   $nord6  $nord10
+client.focused          $nord4  $nord9   $nord0  $nord9 
+client.focused_inactive $nord4  $nord3   $nord6  $nord9
+client.unfocused        $nord4  $nord3   $nord6  $nord9
+client.urgent           $nord4  $nord3   $nord6  $nord9
+client.placeholder      $nord4  $nord3   $nord6  $nord9
 client.background       $nord4
 
