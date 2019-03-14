@@ -1,0 +1,15 @@
+[Added Associations]
+image/jpeg=feh.desktop;
+image/png=feh.desktop;
+video/x-matroska=mpv.desktop;
+application/pdf=lector.desktop;
+audio/flac=mpv.desktop;
+audio/mpeg=mpv.desktop;
+
+[Default Applications]
+inode/directory=Thunar-folder-handler.desktop
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop

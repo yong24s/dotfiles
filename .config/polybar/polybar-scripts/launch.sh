@@ -8,3 +8,9 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 
 polybar main &
 
+# Uncomment the following lines to show polybar in all monitors.
+
+# for m in $(polybar --list-monitors | cut -d":" -f1); do
+#     MONITOR=$m polybar --reload main &
+# done
+
