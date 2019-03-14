@@ -8,12 +8,17 @@ makepkg -si
 
 # Install tlp for power management
 yay -S linux-headers
-yay -S acpi_call-dkms tp_smapi-dkms tlp
+yay -S acpi_call-dkms tp_smapi-dkms tlp tlp-rdw
 sudo systemctl enable tlp.service
 sudo systemctl enable tlp-sleep.service
+sudo systemctl enable NetworkManager-dispatcher.service
 sudo systemctl mask systemd-rfkill.service
 sudo systemctl mask systemd-rfkill.socket
 sudo cp etc-default/tlp /etc/default/tlp
+
+# Install bluetooth
+yay -S bluez bluez-utils
+sudo systemctl enable bluetooth.service
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

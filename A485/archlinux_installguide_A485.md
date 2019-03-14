@@ -21,8 +21,8 @@ mkfs.ext4 /dev/sda2
 5. Mount the partition
 ```
 mount /dev/sda2 /mnt
-mkdir /mnt/efi
-mount /dev/sda1 /mnt/efi
+mkdir /mnt/boot/efi
+mount /dev/sda1 /mnt/boot/efi
 ```
 
 ### Install Core Packages
@@ -80,7 +80,7 @@ Change GRUB_CMDLINE_LINUX_DEFAULT = "quiet idle=nomwait acpi_backlight=vendor"
 ### Install GRUB
 ```
 pacman -S amd-ucode efibootmgr
-grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB /dev/sda
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
