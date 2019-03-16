@@ -72,7 +72,7 @@ Insert [USER] ALL=(ALL) ALL
 
 ### Add kernel options
 ```
-pacman -S grub
+pacman -S grub os-prober
 vim /etc/grub.d/grub
 Change GRUB_CMDLINE_LINUX_DEFAULT = "quiet idle=nomwait acpi_backlight=vendor"
 ```
