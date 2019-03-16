@@ -52,14 +52,17 @@ yay -S redshift
 # Install useful programs
 yay -S google-chrome
 yay -S git ranger rxvt-unicode urxvt-resize-font-git
-yay -S mlocate wget cronie udiskie arandr
+yay -S mlocate wget cronie udiskie arandr tree
 yay -S mpv cmus alsa-lib i3-scrot bc galculator
 
 # Additional tools
-yay -S xfreerdp openvpn wireguard-tools
-yay -S xl2tpd openswan
+yay -S xfreerdp openvpn wireguard-tools wireguard-arch wireguard-lts
 yay -S libreoffice-still evince
 yay -S jdk-openjdk intellij-idea-community-edition
+
+# Install vim completion
+yay -S vim-youcompleteme-git
+pip3 install --user --upgrade pynvim
 
 # Setup betterlockscreen
 betterlockscreen -u ~/Pictures/wallpaper.jpg
@@ -87,3 +90,4 @@ systemctl list-unit-files --state=enabled
 
 # List mask services
 systemctl list-unit-files --state=mask
+
