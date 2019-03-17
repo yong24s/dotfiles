@@ -60,10 +60,6 @@ yay -S xfreerdp openvpn wireguard-tools wireguard-arch wireguard-lts
 yay -S libreoffice-still evince
 yay -S jdk-openjdk intellij-idea-community-edition
 
-# Install vim completion
-yay -S vim-youcompleteme-git
-pip3 install --user --upgrade pynvim
-
 # Setup betterlockscreen
 betterlockscreen -u ~/Pictures/wallpaper.jpg
 sudo systemctl enable betterlockscreen@$USER

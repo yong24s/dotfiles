@@ -12,8 +12,10 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdtree' 
+Plug 'scrooloose/nerdtree'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 " Plug 'drewtempelmeyer/palenight.vim'
 
 " Initialize plugin system
@@ -32,4 +34,6 @@ set smartcase
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+let g:airline_theme='base16_nord'
 
