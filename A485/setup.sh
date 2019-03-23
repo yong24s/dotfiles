@@ -45,7 +45,7 @@ sudo pacman -S light
 
 # Install UI stuffs
 yay -S polybar feh ttf-material-design-icons-webfont rofi lxappearance arc-gtk-theme paper-icon-theme neofetch noto-fonts-emoji python-ueberzug-git
-yay -S thunar thunar-archive-plugin gvfs gvfs-smb sshfs gnome-keyring
+yay -S thunar thunar-archive-plugin gvfs gvfs-smb sshfs gnome-keyring tumbler raw-thumbnailer
 yay -S betterlockscreen xautolock dunst
 yay -S redshift
 
@@ -70,6 +70,12 @@ xdg-mime default Thunar-folder-handler.desktop inode/directory
 # Setup getty font
 pacman -S terminus-font
 setfont ter-218n
+
+# VM
+yay -S polkit-gnome
+yay -S qemu libvirt ebtables dnsmasq bridge-utils
+sudo systemctl enable libvirtd.service
+sudo systemctl start libvirtd.service
 
 # Automatically connect to wifi profile
 # /etc/netctl/[PROFILE]
