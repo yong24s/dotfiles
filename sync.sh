@@ -11,6 +11,7 @@ cp -r ~/.config/ranger          .config/
 cp -r ~/.config/nvim            .config/
 cp -r ~/.config/scripts         .config/
 cp -r ~/.config/mpv             .config/
+cp -r ~/.config/compton         .config/
 
 cp ~/.config/cmus/rc            .config/cmus/
 cp ~/.config/mimeapps.list      .config/
