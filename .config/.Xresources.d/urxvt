@@ -6,8 +6,9 @@ Xft.autohint:  		  	   true
 Xft.hintstyle:			   hintslight
 Xft.lcdfilter:  		   lcddefault
  
-URxvt.font: xft:Fira Code:style=Regular:pixelsize=16 
-URxvt*letterSpace:	          -1
+URxvt*font: xft:Fira Code:pixelsize=16:minspace=False,style=regular, xft:DejaVu Sans:pixelsize=16
+URxvt*boldFont: xft:Fira Code:pixelsize=16:minspace=False,style=regular, xft:DejaVu Sans:pixelsize=16
+URxvt*letterSpace:	          0
 URxvt.internalBorder:	      	  25
 URxvt.scrollBar:		  false
 URxvt*mouseWheelScrollPage:       false

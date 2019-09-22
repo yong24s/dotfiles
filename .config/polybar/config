@@ -1,7 +1,8 @@
 # vim: filetype=dosini
 
 [colors]
-  nord0 = ${xrdb:background}
+  # nord0 = ${xrdb:background}
+  nord0 = #0000000
   nord3 = ${xrdb:color8}
   nord6 = ${xrdb:color15}
   nord7 = ${xrdb:color14}
@@ -15,7 +16,7 @@
 [bar/main]
   ; monitor = ${env:MONITOR:HDMI-1}
   width = 100%
-  height = 28
+  height = 32
   ;offset-x = 3%
   ;offset-y = 3%
   radius = 0.0

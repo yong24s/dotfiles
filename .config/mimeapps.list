@@ -5,6 +5,7 @@ video/x-matroska=mpv.desktop;
 application/pdf=lector.desktop;
 audio/flac=mpv.desktop;
 audio/mpeg=mpv.desktop;
+video/webm=mpv.desktop;
 
 [Default Applications]
 inode/directory=Thunar-folder-handler.desktop

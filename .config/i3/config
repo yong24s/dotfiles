@@ -206,11 +206,10 @@ mode "resize" {
 # exit resize mode: Enter or Escape
     bindsym Return mode "default"
     bindsym Escape mode "default"
-    bindsym $mod+r "default"
 }
 
 # Lock screen
-bindsym $mod+Escape exec --no-startup-id betterlockscreen -l dim blur
+bindsym $mod+Escape exec --no-startup-id betterlockscreen -l dimblur
 
 
 
@@ -218,7 +217,7 @@ exec --no-startup-id udiskie
 exec --no-startup-id redshift -l 1.35:103.82
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec_always --no-startup-id feh --bg-scale $HOME/Pictures/fuyuki.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/Pictures/wp.png
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
 # exec --no-startup-id xfce4-power-manager
 # exec --no-startup-id blueman-applet

@@ -60,6 +60,8 @@ yay -S xfreerdp openvpn wireguard-tools wireguard-arch wireguard-lts
 yay -S libreoffice-still evince
 yay -S jdk-openjdk intellij-idea-community-edition
 
+yay -S bind-tools netcat nmap
+
 # Setup betterlockscreen
 betterlockscreen -u ~/Pictures/wallpaper.jpg
 sudo systemctl enable betterlockscreen@$USER
