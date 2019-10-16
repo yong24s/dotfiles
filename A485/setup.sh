@@ -48,9 +48,10 @@ yay -S polybar feh ttf-material-design-icons-webfont rofi lxappearance arc-gtk-t
 yay -S thunar thunar-archive-plugin gvfs gvfs-smb sshfs gnome-keyring tumbler raw-thumbnailer
 yay -S betterlockscreen xautolock dunst
 yay -S redshift
+yay -S xclip
 
 # Install useful programs
-yay -S google-chrome
+yay -S google-chrome firefox
 yay -S git ranger rxvt-unicode urxvt-resize-font-git
 yay -S mlocate wget cronie udiskie arandr tree
 yay -S mpv cmus alsa-lib i3-scrot bc galculator
@@ -59,6 +60,7 @@ yay -S mpv cmus alsa-lib i3-scrot bc galculator
 yay -S xfreerdp openvpn wireguard-tools wireguard-arch wireguard-lts
 yay -S libreoffice-still evince
 yay -S jdk-openjdk intellij-idea-community-edition
+yay -S code
 
 yay -S bind-tools netcat nmap
 
@@ -79,6 +81,12 @@ yay -S qemu libvirt ebtables dnsmasq bridge-utils
 sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
 
+# screenshot tool
+yay -S flameshot
+
+# devops tools
+yay -S htop wrk docker-compose
+
 # Automatically connect to wifi profile
 # /etc/netctl/[PROFILE]
 # netctl enable [PROFILE]
@@ -95,3 +103,7 @@ systemctl list-unit-files --state=enabled
 # List mask services
 systemctl list-unit-files --state=mask
 
+# Downgrade a pacman install
+## sudo pacman -U /var/cache/pacman/pkg/..
+# Downgrade a pacman install
+## sudo pacman -U /var/cache/pacman/pkg/....
